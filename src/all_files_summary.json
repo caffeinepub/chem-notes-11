@@ -1,0 +1,21 @@
+{
+  "backend/main.mo": "Defines an empty Motoko actor with no backend logic.",
+  "feature_evidence.json": "Lists implemented features, associated files, components, and test IDs for the project.",
+  "frontend-file-summaries.txt": "Contains pre-written summaries describing the purpose of each frontend file.",
+  "frontend/index.css": "Sets global Tailwind layers and OKLCH-based light/dark theme color variables.",
+  "frontend/index.html": "Basic HTML entry point mounting the React app and loading main.tsx.",
+  "frontend/src/App.tsx": "Configures TanStack Router with routes for home, reactions index, and reaction detail pages.",
+  "frontend/src/components/NotesImageViewer.tsx": "Component showing note images with hover effects and a dialog-based zoom view.",
+  "frontend/src/components/SiteLayout.tsx": "Provides shared site layout with header navigation, routed content, and footer.",
+  "frontend/src/data/namedReactions.ts": "Static list of named reactions with titles, slugs, descriptions, and image paths.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages an authenticated or anonymous backend actor tied to Internet Identity.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Implements Internet Identity auth handling, exposing login, logout, and identity state.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder hook returning no backend queries for the static frontend.",
+  "frontend/src/index.css": "Defines Tailwind layers, theme CSS variables for light and dark modes, global styles, and custom scrollbar styling.",
+  "frontend/src/main.tsx": "Bootstraps the React app with React Query and Internet Identity provider and loads global styles.",
+  "frontend/src/pages/HomePage.tsx": "Renders the homepage with a hero section, credits, and feature cards linking to the reactions list.",
+  "frontend/src/pages/NamedReactionsIndexPage.tsx": "Displays a list of named reactions with descriptions and links to their individual pages.",
+  "frontend/src/pages/ReactionPage.tsx": "Shows a specific reaction’s title, description, and its associated notes images with navigation back.",
+  "frontend/tailwind.config.js": "Configures Tailwind theme extensions, colors, fonts, animations, and content paths.",
+  "project_state.json": "Stores metadata about project state, features, requirements, and required static images."
+}

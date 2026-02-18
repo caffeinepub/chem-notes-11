@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Website to display handwritten notes for CBSE Class 11 Chemistry named reactions, with a homepage/front page stating \"made by PIYUSH SRIVASTAVA\" and notes accessible on separate pages.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Chalkboard-style hero background with subtle chemistry doodles and no readable text (hero-bg.dim_1920x1080.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Wurtz Reaction\" (note-wurtz.dim_1200x1600.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Fittig Reaction\" (note-fittig.dim_1200x1600.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Wurtz-Fittig Reaction\" (note-wurtz-fittig.dim_1200x1600.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Kolbe's Electrolysis\" (note-kolbe.dim_1200x1600.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Reimer–Tiemann Reaction\" (note-reimer-tiemann.dim_1200x1600.png)\n- Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Cannizzaro Reaction\" (note-cannizzaro.dim_1200x1600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-homepage-front-page-that-prominently-displays-the-exact-text-made-by-piyush-srivastava",
+      "title": "Create a homepage/front page that prominently displays the exact text: \"made by PIYUSH SRIVASTAVA\".",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-named-reactions-index-page-for-cbse-class-11-chemistry-that-lists-available-named-reactions-and-allows-opening-each-reaction-on-its-own-separate-page",
+      "title": "Add a named reactions index page for CBSE Class 11 Chemistry that lists available named reactions and allows opening each reaction on its own separate page.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-for-each-named-reaction-page-display-the-handwritten-notes-as-one-or-more-static-images-with-basic-viewing-ux-responsive-layout-click-to-open-larger-view-or-similar",
+      "title": "For each named reaction page, display the handwritten notes as one or more static images with basic viewing UX (responsive layout; click-to-open larger view or similar).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-visual-theme-across-the-site-colors-typography-spacing-and-components-suitable-for-a-class-11-chemistry-notes-website-and-keep-it-consistent-across-the-homepage-index-and-reaction-pages",
+      "title": "Apply a coherent visual theme across the site (colors, typography, spacing, and components) suitable for a Class 11 chemistry notes website, and keep it consistent across the homepage, index, and reaction pages.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-generated-handwritten-notes-images-and-any-decorative-images-as-static-frontend-assets-and-render-them-directly-from-the-frontend-do-not-fetch-images-from-the-backend",
+      "title": "Add the generated handwritten-notes images and any decorative images as static frontend assets and render them directly from the frontend (do not fetch images from the backend).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website hosting handwritten notes on CBSE Class 11 Chemistry named reactions, with a front page text \"made by PIYUSH SRIVASTAVA\" and notes on separate pages.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Chem Notes 11",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,111 @@
+{
+  "kind": "build_request",
+  "title": "CBSE Class 11 Chemistry Named Reactions Notes Website (Handwritten Notes + Homepage Credit)",
+  "projectName": "Chem Notes 11",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a homepage/front page that prominently displays the exact text: \"made by PIYUSH SRIVASTAVA\".",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create a website in which handwritten notes on named reactions from chemistry class 11 cbse is there and front page will be \"made by PIYUSH SRIVASTAVA\""
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visiting the app root route shows the exact text \"made by PIYUSH SRIVASTAVA\" (matching capitalization and spelling).",
+        "The homepage provides clear navigation to the named reactions notes section."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a named reactions index page for CBSE Class 11 Chemistry that lists available named reactions and allows opening each reaction on its own separate page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "handwritten notes on named reactions from chemistry class 11 cbse is there"
+        ]
+      },
+      "acceptanceCriteria": [
+        "There is a dedicated page that lists named reactions.",
+        "Each reaction entry links to a dedicated reaction details page (separate page/route)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "For each named reaction page, display the handwritten notes as one or more static images with basic viewing UX (responsive layout; click-to-open larger view or similar).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "handwritten notes on named reactions from chemistry class 11 cbse is there"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each reaction page renders at least one handwritten-notes image from static assets.",
+        "Images are readable on both mobile and desktop (responsive scaling and sensible margins).",
+        "A user can view the notes at a larger size (e.g., open in a dialog/lightbox or dedicated full-view)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply a coherent visual theme across the site (colors, typography, spacing, and components) suitable for a Class 11 chemistry notes website, and keep it consistent across the homepage, index, and reaction pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A single consistent theme is used across all pages (typography, color palette, and layout).",
+        "Theme does not use a blue/purple primary look by default."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Add the generated handwritten-notes images and any decorative images as static frontend assets and render them directly from the frontend (do not fetch images from the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "The app displays the generated images without any backend calls for image delivery."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing UI text in the app.",
+    "Frontend must not modify files under frontend/src/components/ui or other immutable paths listed in SYSTEM_CONTEXT; compose them instead.",
+    "Backend (if used) must remain a single Motoko actor; do not introduce multiple backend services.",
+    "Do not add third-party authentication providers; only Internet Identity is supported (and is optional for this request)."
+  ],
+  "nonGoals": [
+    "Building an admin panel or authenticated upload workflow for adding new note images.",
+    "Adding real-time collaboration, chat, or commenting features.",
+    "Integrating external databases or third-party storage/CDNs for notes images."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Chalkboard-style hero background with subtle chemistry doodles and no readable text (hero-bg.dim_1920x1080.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Wurtz Reaction\" (note-wurtz.dim_1200x1600.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Fittig Reaction\" (note-fittig.dim_1200x1600.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Wurtz-Fittig Reaction\" (note-wurtz-fittig.dim_1200x1600.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Kolbe's Electrolysis\" (note-kolbe.dim_1200x1600.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Reimer–Tiemann Reaction\" (note-reimer-tiemann.dim_1200x1600.png)",
+      "Handwritten notes page image with notebook paper texture and chemistry handwriting titled \"Cannizzaro Reaction\" (note-cannizzaro.dim_1200x1600.png)"
+    ],
+    "edits": []
+  }
+}

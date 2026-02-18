@@ -1,0 +1,183 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Chem Notes 11 — CBSE Class 11 Chemistry Named Reactions Notes (Frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Add a homepage that shows the exact credit text and provides navigation to the notes section.",
+      "acceptanceCriteria": [
+        "Visiting the app root route shows the exact text \"made by PIYUSH SRIVASTAVA\" (matching capitalization and spelling).",
+        "The homepage provides clear navigation to the named reactions notes section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "create",
+          "description": "Create the homepage UI that prominently renders the exact text \"made by PIYUSH SRIVASTAVA\" and includes a clear call-to-action link/button to the named reactions index. Use shadcn-ui components (e.g., Card/Button) for consistent layout; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout with a simple header/nav that includes a link to the named reactions section, ensuring consistent structure across pages. Use shadcn-ui components where appropriate; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the app root component and wire the root route to HomePage, including navigation to the named reactions index page (router setup and route registration)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Create a named reactions index page listing reactions and linking to dedicated reaction detail pages.",
+      "acceptanceCriteria": [
+        "There is a dedicated page that lists named reactions.",
+        "Each reaction entry links to a dedicated reaction details page (separate page/route)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/data/namedReactions.ts",
+          "operation": "create",
+          "description": "Add a static, frontend-only registry of the available named reactions (title, slug/route key, and associated static image asset paths) for rendering the index and details pages."
+        },
+        {
+          "path": "frontend/src/pages/NamedReactionsIndexPage.tsx",
+          "operation": "create",
+          "description": "Create the named reactions index page that lists all reactions from the static registry and links each item to its dedicated reaction page. Use shadcn-ui components (e.g., Card/Button) for list styling; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/ReactionPage.tsx",
+          "operation": "create",
+          "description": "Create the reaction detail page that reads the route parameter (reaction slug) and renders the corresponding reaction content based on the static registry (no backend calls)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire navigation and routing for the named reactions index route and the reaction detail route(s), and ensure they render within the shared SiteLayout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Render handwritten notes as static images on each reaction page with responsive viewing and a larger-view option.",
+      "acceptanceCriteria": [
+        "Each reaction page renders at least one handwritten-notes image from static assets.",
+        "Images are readable on both mobile and desktop (responsive scaling and sensible margins).",
+        "A user can view the notes at a larger size (e.g., open in a dialog/lightbox or dedicated full-view)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/NotesImageViewer.tsx",
+          "operation": "create",
+          "description": "Create a reusable notes image viewer that displays a responsive inline image and supports click-to-open a larger view using a shadcn-ui Dialog (lightbox-style). Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/ReactionPage.tsx",
+          "operation": "modify",
+          "description": "Use NotesImageViewer to render one or more handwritten note images for the selected reaction from static assets, ensuring responsive layout and a larger-view interaction."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add global styling to support readable image presentation (sensible margins, max-width behavior, and consistent typography) across mobile and desktop while remaining theme-consistent."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a consistent, chemistry-notes-appropriate visual theme across all pages, avoiding a blue/purple primary look.",
+      "acceptanceCriteria": [
+        "A single consistent theme is used across all pages (typography, color palette, and layout).",
+        "Theme does not use a blue/purple primary look by default."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define the site-wide theme via CSS variables and base styles (e.g., chalkboard/green or warm neutral primary, consistent typography, spacing) and ensure it applies globally (non-blue/purple primary by default)."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "modify",
+          "description": "Ensure the shared layout applies consistent spacing, typography hierarchy, and reusable page structure across the homepage, index, and reaction pages. Use shadcn-ui components where helpful; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Align homepage sections (hero, credit text, navigation CTA) with the global theme and shared layout styling for consistency."
+        },
+        {
+          "path": "frontend/src/pages/NamedReactionsIndexPage.tsx",
+          "operation": "modify",
+          "description": "Align the reactions listing UI with the global theme (typography, spacing, cards/buttons) for consistency."
+        },
+        {
+          "path": "frontend/src/pages/ReactionPage.tsx",
+          "operation": "modify",
+          "description": "Align reaction page layout and image viewer presentation with the global theme (typography and spacing) for consistency."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add all generated images as static frontend assets and reference them directly from the UI (no backend fetching).",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated and are referenced by the UI.",
+        "The app displays the generated images without any backend calls for image delivery."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated static asset hero-bg.dim_1920x1080.png to be used on the homepage as a decorative hero background (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-wurtz.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-wurtz.dim_1200x1600.png for the Wurtz Reaction notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-fittig.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-fittig.dim_1200x1600.png for the Fittig Reaction notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-wurtz-fittig.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-wurtz-fittig.dim_1200x1600.png for the Wurtz-Fittig Reaction notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-kolbe.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-kolbe.dim_1200x1600.png for the Kolbe's Electrolysis notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-reimer-tiemann.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-reimer-tiemann.dim_1200x1600.png for the Reimer–Tiemann Reaction notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/public/assets/generated/note-cannizzaro.dim_1200x1600.png",
+          "operation": "create",
+          "description": "Add the generated static asset note-cannizzaro.dim_1200x1600.png for the Cannizzaro Reaction notes page (frontend-served static file)."
+        },
+        {
+          "path": "frontend/src/data/namedReactions.ts",
+          "operation": "modify",
+          "description": "Reference the exact generated image filenames using full workspace paths under frontend/public/assets/generated (including hero-bg.dim_1920x1080.png and each note-*.dim_1200x1600.png) so the UI renders them as static assets without backend calls."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Wire the hero background to use the static asset at frontend/public/assets/generated/hero-bg.dim_1920x1080.png and ensure it is purely frontend-served (no backend fetch)."
+        },
+        {
+          "path": "frontend/src/pages/ReactionPage.tsx",
+          "operation": "modify",
+          "description": "Ensure each reaction detail page renders its associated note image(s) via static asset references (no backend calls) using the entries in the static named reactions registry."
+        }
+      ]
+    }
+  ]
+}

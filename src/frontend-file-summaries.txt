@@ -1,0 +1,12 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for home, reactions index, and individual reaction detail pages, all wrapped in a shared SiteLayout.",
+  "frontend/src/components/SiteLayout.tsx": "Shared layout component providing consistent header navigation with logo and route links, main content area with Outlet, and footer with attribution and caffeine.ai link.",
+  "frontend/src/pages/HomePage.tsx": "Homepage featuring a hero section with background image, prominent \"made by PIYUSH SRIVASTAVA\" credit card, and feature cards highlighting handwritten notes and named reactions.",
+  "frontend/src/pages/NamedReactionsIndexPage.tsx": "Index page displaying all available named reactions in card format with titles, descriptions, and navigation buttons using proper TanStack Router Link params to individual reaction detail pages.",
+  "frontend/src/pages/ReactionPage.tsx": "Individual reaction detail page that displays the reaction title, description, and handwritten notes images using the NotesImageViewer component with back navigation.",
+  "frontend/src/components/NotesImageViewer.tsx": "Reusable component that displays handwritten note images with hover effects and click-to-zoom functionality using a Dialog for full-size viewing.",
+  "frontend/src/data/namedReactions.ts": "Static data registry containing all named reactions with their titles, slugs, descriptions, and associated handwritten note image paths.",
+  "frontend/src/index.css": "Global styles defining a warm academic color palette inspired by chalkboards and notebooks using OKLCH colors, with both light and dark themes avoiding blue/purple primaries.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom fonts, varied border radii, custom shadows, and additional animations for a polished chemistry notes aesthetic.",
+  "frontend/src/hooks/useQueries.ts": "Minimal queries file as no backend data fetching is required for this static notes website."
+}

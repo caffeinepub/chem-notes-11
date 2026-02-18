@@ -1,0 +1,108 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-homepage-front-page-that-prominently-displays-the-exact-text-made-by-piyush-srivastava",
+      "featureTitle": "Create a homepage/front page that prominently displays the exact text: \"made by PIYUSH SRIVASTAVA\".",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-named-reactions-index-page-for-cbse-class-11-chemistry-that-lists-available-named-reactions-and-allows-opening-each-reaction-on-its-own-separate-page",
+      "featureTitle": "Add a named reactions index page for CBSE Class 11 Chemistry that lists available named reactions and allows opening each reaction on its own separate page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/data/namedReactions.ts",
+        "frontend/src/pages/NamedReactionsIndexPage.tsx",
+        "frontend/src/pages/ReactionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-for-each-named-reaction-page-display-the-handwritten-notes-as-one-or-more-static-images-with-basic-viewing-ux-responsive-layout-click-to-open-larger-view-or-similar",
+      "featureTitle": "For each named reaction page, display the handwritten notes as one or more static images with basic viewing UX (responsive layout; click-to-open larger view or similar).",
+      "files": [
+        "frontend/src/components/NotesImageViewer.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/ReactionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-coherent-visual-theme-across-the-site-colors-typography-spacing-and-components-suitable-for-a-class-11-chemistry-notes-website-and-keep-it-consistent-across-the-homepage-index-and-reaction-pages",
+      "featureTitle": "Apply a coherent visual theme across the site (colors, typography, spacing, and components) suitable for a Class 11 chemistry notes website, and keep it consistent across the homepage, index, and reaction pages.",
+      "files": [
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/NamedReactionsIndexPage.tsx",
+        "frontend/src/pages/ReactionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-generated-handwritten-notes-images-and-any-decorative-images-as-static-frontend-assets-and-render-them-directly-from-the-frontend-do-not-fetch-images-from-the-backend",
+      "featureTitle": "Add the generated handwritten-notes images and any decorative images as static frontend assets and render them directly from the frontend (do not fetch images from the backend).",
+      "files": [
+        "frontend/src/data/namedReactions.ts",
+        "frontend/src/pages/HomePage.tsx",
+        "frontend/src/pages/ReactionPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
